@@ -67,7 +67,7 @@ export default function InteractiveMap() {
             return (
               <g key={city.name} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}
                 onClick={(e) => { e.stopPropagation(); setActive(active === i ? null : i); }} style={{ cursor: "pointer" }}>
-                  <circle cx={x} cy={y} r={20} fill="transparent" />
+                  <circle cx={x} cy={y} r={30} fill="transparent" />
                 {isActive && (
                   <circle cx={x} cy={y} r={14} fill="none" stroke="#B8A88A" strokeWidth={0.8} opacity={0.4}>
                     <animate attributeName="r" from="6" to="20" dur="1.5s" repeatCount="indefinite" />
