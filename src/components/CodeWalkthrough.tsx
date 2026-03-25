@@ -5,20 +5,20 @@ import Reveal from "./Reveal";
 
 const steps = [
   {
-    line: "const trace = new ScholarTrace()",
-    note: "Initialize the engine that quietly tracks every keystroke in VS Code",
+    line: "vscode.workspace.onDidChangeTextDocument(event => {",
+    note: "Listen for every keystroke and edit across all open files in VS Code",
   },
   {
-    line: "trace.startSession({ userId, projectId })",
-    note: "Begin a session linked to the student and their assignment",
+    line: "const timeout = setTimeout(() => {",
+    note: "Debounce for 5 seconds — only log after the student pauses typing, not on every character",
   },
   {
-    line: "trace.onEdit((delta) => log(delta))",
-    note: "Each edit is timestamped and hashed, building a tamper-proof timeline",
+    line: "logEntries.push({ timestamp, filename, content });",
+    note: "Store the full file snapshot with a timestamp. This builds the tamper-proof edit timeline.",
   },
   {
-    line: "await trace.push({ commit: sha256(delta) })",
-    note: "Push the proof to the backend. A professor can now verify authorship.",
+    line: "await fetch('http://localhost:5000/api/uploadLogs', {",
+    note: "Push all logged snapshots to the Express backend, linked to the student's email for professor review.",
   },
 ];
 
