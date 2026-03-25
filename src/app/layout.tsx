@@ -28,11 +28,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Sanat Gupta",
   description:
-    "Full-stack engineer building useful, well-crafted applications. CS at University of Michigan.",
+    "Sanat Gupta. CS Engineering at the University of Michigan, Ann Arbor.",
   openGraph: {
     title: "Sanat Gupta",
     description:
-      "Full-stack engineer building useful, well-crafted applications.",
+      "CS Engineering at the University of Michigan, Ann Arbor.",
     url: "https://thesanatgupta.com",
     siteName: "Sanat Gupta",
     type: "website",
