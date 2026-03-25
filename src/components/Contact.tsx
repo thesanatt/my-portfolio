@@ -49,7 +49,7 @@ export default function Contact() {
             style={{ borderTop: "1px solid rgba(228,224,208,0.08)" }}
           >
             <p className="font-body text-[12px] md:text-[12.5px] text-cream-dim">
-              {"Built by Sanat Gupta with Next.js, TypeScript, Tailwind, Prisma & Claude"}
+              {"Sanat Gupta · 2026"}
             </p>
           </div>
         </Reveal>
