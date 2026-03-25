@@ -38,7 +38,7 @@ function getItems(close: () => void): PaletteItem[] {
     // Links
     { id: "link-github", label: "GitHub", category: "Links", keywords: ["github", "code", "repo", "source", "repositories"], action: () => { close(); window.open("https://github.com/thesanatt", "_blank"); }, detail: "github.com/thesanatt" },
     { id: "link-resume", label: "Resume", category: "Links", keywords: ["resume", "cv", "pdf", "download", "experience"], action: () => { close(); window.open("/resume.pdf", "_blank"); }, detail: "Download PDF" },
-    { id: "link-email", label: "Email", category: "Links", keywords: ["email", "mail", "contact", "reach"], action: () => { close(); window.location.href = "mailto:sanatt@umich.edu"; }, detail: "sanat@umich.edu" },
+    { id: "link-email", label: "Email", category: "Links", keywords: ["email", "mail", "contact", "reach"], action: () => { close(); window.location.href = "mailto:sanatt@umich.edu"; }, detail: "sanatt@umich.edu" },
     { id: "link-linkedin", label: "LinkedIn", category: "Links", keywords: ["linkedin", "professional", "network"], action: () => { close(); window.open("https://linkedin.com", "_blank"); }, detail: "Connect on LinkedIn" },
   ];
 }
