@@ -59,7 +59,7 @@ export default function InteractiveMap() {
     <div onClick={() => setActive(null)}>
 
       {mounted ? (
-        <svg viewBox="0 0 900 600" className="w-full h-auto">
+        <svg viewBox="0 0 900 450" className="w-full h-auto">
           {WORLD_PATHS.map((d, i) => (
             <path key={i} d={d} fill="#1A1917" stroke="#5C5650" strokeWidth={0.5} opacity={0.7} />
           ))}
@@ -91,7 +91,7 @@ export default function InteractiveMap() {
           })}
         </svg>
       ) : (
-        <div style={{ height: 450 }} />
+        <div style={{ height: 340 }} />
       )}
 
       <div style={{
