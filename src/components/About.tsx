@@ -29,11 +29,6 @@ export default function About() {
               {"CS Engineering and Math at the University of Michigan. I've worked on automation systems at Youphoria, production modeling with engineers at Eli Lilly, and a handful of personal projects in between."}
             </p>
           </Reveal>
-          <Reveal delay={0.05}>
-            <p className="font-body text-[15px] text-cream-muted leading-[1.85]">
-              I work across the stack and care about making things that are useful and considered, not just functional.
-            </p>
-          </Reveal>
         </div>
 
         <Reveal delay={0.1}>
