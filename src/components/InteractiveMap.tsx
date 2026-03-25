@@ -20,8 +20,8 @@ const CITIES = [
   { name: "Loire Valley", lat: 47.35, lng: 0.68, label: "France", story: "Biked through vineyards and castles. France outside of Paris hits different.", img: null },
   { name: "Chicago", lat: 41.88, lng: -87.63, label: "Weekend trips", story: "Deep dish pizza and architecture boat tours. The Midwest’s other great city.", img: null },
   { name: "Delhi", lat: 28.61, lng: 77.21, label: "Where it started", story: "Home before Michigan. The chaos, the food, the energy, nothing else comes close.", img: null },
-  { name: "Goa", lat: 15.3, lng: 74.0, label: "India", story: "Wrote some of my best side project code with my feet in the sand. Don’t judge.", img: null },
-  { name: "Jaipur", lat: 26.92, lng: 75.79, label: "The Pink City", story: "Colors and architecture that make you realize most software UI is painfully boring.", img: null },
+  { name: "Goa", lat: 15.3, lng: 74.0, label: "India", story: "Wrote some of my best side project code with my feet in the sand. Don’t judge.", img: "/cities/goa.jpg" },
+  { name: "Jaipur", lat: 26.92, lng: 75.79, label: "The Pink City", story: "Colors and architecture that make you realize most software UI is painfully boring.", img: "/cities/jaipur.jpg" },
   { name: "Shimla", lat: 31.1, lng: 77.17, label: "India", story: "The toy train up the mountains is one of those experiences that makes you put your phone away.", img: null },
 ];
 
@@ -67,7 +67,7 @@ export default function InteractiveMap() {
             return (
               <g key={city.name} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}
                 onClick={(e) => { e.stopPropagation(); setActive(active === i ? null : i); }} style={{ cursor: "pointer" }}>
-                  <circle cx={x} cy={y} r={30} fill="transparent" />
+                  <circle cx={x} cy={y} r={22} fill="transparent" />
                 {isActive && (
                   <circle cx={x} cy={y} r={14} fill="none" stroke="#B8A88A" strokeWidth={0.8} opacity={0.4}>
                     <animate attributeName="r" from="6" to="20" dur="1.5s" repeatCount="indefinite" />
