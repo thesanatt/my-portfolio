@@ -6,17 +6,13 @@ export default function Hero() {
       <div className="max-w-[600px]">
         <Reveal>
           <p className="font-body text-[12px] md:text-[13px] text-cream-dim mb-5 md:mb-7 tracking-[1.5px] uppercase">
-            Computer Science &middot; University of Michigan
+            Computer Science Engineering &middot; University of Michigan
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
           <h1 className="font-display text-[34px] md:text-[52px] font-medium leading-[1.15] text-cream mb-5 md:mb-6">
-            I like building things
-            <br />
-            that are <span className="text-accent">useful</span> and
-            <br />
-            <span className="text-accent">well-crafted.</span>
+            Sanat Gupta
           </h1>
         </Reveal>
 
@@ -26,8 +22,7 @@ export default function Hero() {
 
         <Reveal delay={0.2}>
           <p className="font-body text-[15px] md:text-base text-cream-soft leading-[1.8] max-w-[460px] mb-8 md:mb-10">
-            Full-stack applications, AI tools, developer platforms. Currently at
-            the University of Michigan, always working on something new.
+            Computer Science Engineering at the University of Michigan, Ann Arbor.
           </p>
         </Reveal>
 
