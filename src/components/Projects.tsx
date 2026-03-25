@@ -94,25 +94,17 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <ProjectCard
           index={0}
-          featured
           title="ScholarTrace"
           subtitle="Developer Tools · Academic Integrity"
-          description="A VS Code extension and web platform that logs code history so students can prove authorship. I designed the extension-to-backend pipeline and built the professor-facing dashboard."
+          description="A VS Code extension that listens to every file edit, debounces keystrokes, and snapshots code with timestamps to build a tamper-proof authorship timeline. Logs are pushed to an Express/MongoDB backend where professors can review student coding history."
           tags={["React", "TypeScript", "Express", "MongoDB"]}
         />
         <ProjectCard
           index={1}
           title="AI Task Cost Prediction"
           subtitle="Machine Learning · Optimization"
-          description="An ML engine that predicts the cost of running AI tasks across different models and configurations."
-          tags={["Python", "PyTorch", "FastAPI"]}
-        />
-        <ProjectCard
-          index={2}
-          title="More Coming Soon"
-          subtitle="In Progress"
-          description="Always building. Check back or ask the AI assistant about what I'm working on next."
-          tags={["Stay Tuned"]}
+          description="A Streamlit app that takes a plain-text project description, extracts resource needs through keyword scoring, runs predictions through a multi-output Random Forest model, and outputs staffing estimates with confidence intervals and total cost."
+          tags={["Python", "scikit-learn", "Streamlit", "joblib"]}
         />
       </div>
     </section>
