@@ -41,17 +41,17 @@ export default function Home() {
       <section id="world" className="py-16 md:py-[100px] md:pb-[60px] px-6 md:px-12 max-w-[1100px] mx-auto">
         <Reveal>
           <p className="font-body text-xs text-cream-dim mb-3.5 font-medium tracking-[2px] uppercase">
-            Around the World
+            Places I've Been
           </p>
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="font-display text-[30px] md:text-[38px] font-medium text-cream leading-[1.15] mb-3.5">
-            Places and stories.
+            Some cities, some stories.
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
           <p className="font-body text-[15px] text-cream-muted leading-[1.75] max-w-[480px] mb-8 md:mb-11">
-            The best ideas come from the most unexpected places.
+            Tap around the map.
           </p>
         </Reveal>
         <Reveal>

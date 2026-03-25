@@ -7,8 +7,8 @@ const WORLD_PATHS = ["M528,336L513,329L531,326L533,332L528,336Z","M526,325L507,3
 
 const CITIES = [
   { name: "Ann Arbor", lat: 42.28, lng: -83.74, label: "Ground zero", story: "Where most of the real work happens. CS at Michigan, long nights grinding assignments, side projects, and trying to balance ambition with actual sleep.", img: null },
-  { name: "Paris", lat: 48.86, lng: 2.35, label: "Study abroad", story: "Spent a semester doing on-site studies across the city with my professor. Learned more walking through arrondissements than I did in most lecture halls.", img: null },
-  { name: "New York", lat: 40.71, lng: -74.01, label: "The fire-y trip", story: "My hotel literally caught on fire while I was inside. Made it out fine. The trip will never be described as normal again.", img: null },
+  { name: "Paris", lat: 48.86, lng: 2.35, label: "Study abroad", story: "Spent a semester doing on-site studies across the city with my professor. Learned more walking through arrondissements than I did in most lecture halls.", img: "/cities/paris.jpg" },
+  { name: "New York", lat: 40.71, lng: -74.01, label: "The fire-y trip", story: "My hotel literally caught on fire while I was inside. Made it out fine. The trip will never be described as normal again.", img: "/cities/nyc.jpg" },
   { name: "Hong Kong", lat: 22.32, lng: 114.17, label: "Against all odds", story: "My passport went through the washing machine days before this trip. Stressful at the time, hilarious in retrospect. Still made the flight.", img: null },
   { name: "Tokyo", lat: 35.68, lng: 139.69, label: "Precision", story: "Convenience store onigiri at 2am, my first omakase, and way too long spent at the Shibuya Pokemon store. Tokyo just hits different.", img: null },
   { name: "Kyoto", lat: 35.01, lng: 135.77, label: "Quiet reset", story: "Stunning temples, traditional streets, beautiful everything. Could not buy half the souvenirs I wanted because nowhere accepted card.", img: null },
@@ -20,8 +20,8 @@ const CITIES = [
   { name: "Loire Valley", lat: 47.35, lng: 0.68, label: "France outside Paris", story: "Visited a castle with a genuinely scary dark room on the top floor. Then went downstairs and tasted wine. France is a range.", img: null },
   { name: "Chicago", lat: 41.88, lng: -87.63, label: "Weekend escape", story: "Stood on the glass platform at Willis Tower and questioned every decision that led me there. Worth it for the view though.", img: null },
   { name: "Delhi", lat: 28.61, lng: 77.21, label: "Origin story", story: "Where everything started. The kind of city that is impossible to explain to someone who has not been. You just have to go.", img: null },
-  { name: "Goa", lat: 15.3, lng: 74.0, label: "India", story: "Wrote some of my best side project code with my feet in the sand. A softer, slower kind of trip.", img: null },
-  { name: "Jaipur", lat: 26.92, lng: 75.79, label: "Royalty", story: "Spent time at Rambagh Palace and for a moment it genuinely felt like stepping into a different century. The architecture makes everything else feel rushed.", img: null },
+  { name: "Goa", lat: 15.3, lng: 74.0, label: "India", story: "Wrote some of my best side project code with my feet in the sand. A softer, slower kind of trip.", img: "/cities/goa.jpg" },
+  { name: "Jaipur", lat: 26.92, lng: 75.79, label: "Royalty", story: "Spent time at Rambagh Palace and for a moment it genuinely felt like stepping into a different century. The architecture makes everything else feel rushed.", img: "/cities/jaipur.jpg" },
   { name: "Shimla", lat: 31.1, lng: 77.17, label: "Mountain air", story: "Rode the scariest ride at that hilltop amusement park and immediately regretted it. The mountain views after were the actual reward.", img: null },
   { name: "Detroit", lat: 42.33, lng: -83.05, label: "The launchpad", story: "DTW is basically my second home at this point. Most of my college adventures started or ended at that airport.", img: null },
   { name: "East Lansing", lat: 42.74, lng: -84.48, label: "Before the Big House", story: "Before Michigan, there was MSU. Tied to a lot of firsts, growth, and memories I probably should not put on a portfolio site.", img: null },
