@@ -2,10 +2,10 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import CodeWalkthrough from "@/components/CodeWalkthrough";
-import AIChat from "@/components/AIChat";
 import InteractiveMap from "@/components/InteractiveMap";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import CommandPalette from "@/components/CommandPalette";
 import Reveal from "@/components/Reveal";
 
 export default function Home() {
@@ -29,12 +29,11 @@ export default function Home() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="font-body text-[15px] text-cream-muted leading-[1.75] max-w-[480px] mb-11">
-            {"Step through annotated code from my projects, or ask the AI anything about what I\u2019ve built."}
+            Step through annotated code from one of my projects. Click any line to see what it does.
           </p>
         </Reveal>
-        <div className="grid grid-cols-2 gap-5 items-start">
+        <div className="max-w-[580px]">
           <CodeWalkthrough />
-          <AIChat />
         </div>
       </section>
 
@@ -62,6 +61,7 @@ export default function Home() {
 
       <About />
       <Contact />
+      <CommandPalette />
     </main>
   );
 }

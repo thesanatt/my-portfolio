@@ -1,9 +1,9 @@
 import Reveal from "./Reveal";
 
 const links = [
-  { label: "Email", href: "mailto:sanat@umich.edu" },
+  { label: "Email", href: "mailto:sanatt@umich.edu" },
   { label: "GitHub", href: "https://github.com/thesanatt" },
-  { label: "LinkedIn", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sanat-gupta/" },
 ];
 
 export default function Contact() {
