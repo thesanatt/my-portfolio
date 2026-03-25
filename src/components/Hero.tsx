@@ -33,13 +33,13 @@ export default function Hero() {
 
         <Reveal delay={0.3}>
           <div className="flex gap-4 items-center">
-            
+            <a
               href="#work"
               className="bg-accent text-bg px-8 py-3.5 rounded-[10px] text-sm font-body font-semibold no-underline hover:opacity-90 transition-opacity"
             >
               See my work
             </a>
-            
+            <a
               href="https://github.com/thesanatt"
               target="_blank"
               rel="noopener noreferrer"

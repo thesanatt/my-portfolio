@@ -1,65 +1,67 @@
-import Image from "next/image";
+import Nav from "@/components/Nav";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import CodeWalkthrough from "@/components/CodeWalkthrough";
+import AIChat from "@/components/AIChat";
+import InteractiveMap from "@/components/InteractiveMap";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen overflow-x-hidden">
+      <Nav />
+      <Hero />
+      <Projects />
+
+      {/* Under the Hood section */}
+      <section className="pt-10 pb-[100px] px-12 max-w-[1100px] mx-auto">
+        <Reveal>
+          <p className="font-body text-xs text-cream-dim mb-3.5 font-medium tracking-[2px] uppercase">
+            Under the Hood
           </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <h2 className="font-display text-[38px] font-medium text-cream leading-[1.15] mb-3.5">
+            How the code works.
+          </h2>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="font-body text-[15px] text-cream-muted leading-[1.75] max-w-[480px] mb-11">
+            {"Step through annotated code from my projects, or ask the AI anything about what I\u2019ve built."}
+          </p>
+        </Reveal>
+        <div className="grid grid-cols-2 gap-5 items-start">
+          <CodeWalkthrough />
+          <AIChat />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* World section */}
+      <section id="world" className="py-[100px] pb-[60px] px-12 max-w-[1100px] mx-auto">
+        <Reveal>
+          <p className="font-body text-xs text-cream-dim mb-3.5 font-medium tracking-[2px] uppercase">
+            Around the World
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <h2 className="font-display text-[38px] font-medium text-cream leading-[1.15] mb-3.5">
+            Places and stories.
+          </h2>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="font-body text-[15px] text-cream-muted leading-[1.75] max-w-[480px] mb-11">
+            The best ideas come from the most unexpected places.
+          </p>
+        </Reveal>
+        <Reveal>
+          <InteractiveMap />
+        </Reveal>
+      </section>
+
+      <About />
+      <Contact />
+    </main>
   );
 }
