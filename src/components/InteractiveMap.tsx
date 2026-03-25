@@ -94,7 +94,7 @@ export default function InteractiveMap() {
 
       <div style={{
         overflow: "hidden", maxHeight: current ? 240 : 0, opacity: current ? 1 : 0,
-        transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)", marginTop: current ? 8 : 0,
+        transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)", marginTop: current ? 6 : 0,
       }}>
         {current && currentIdx !== null && (
           <div className="rounded-2xl px-4 md:px-[26px] py-4 md:py-[22px] flex flex-col md:flex-row gap-4 md:gap-5 items-start"
