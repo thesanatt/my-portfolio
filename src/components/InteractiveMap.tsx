@@ -8,7 +8,7 @@ const WORLD_PATHS = ["M528,336L513,329L531,326L533,332L528,336Z","M526,325L507,3
 const CITIES = [
   { name: "Ann Arbor", lat: 42.28, lng: -83.74, label: "Home base", story: "Where the code gets written. CS at Michigan, late nights at the Dude, and too much bubble tea.", img: null },
   { name: "Paris", lat: 48.86, lng: 2.35, label: "Study abroad", story: "A semester that changed how I think about craft. Also where I debugged a production issue from a café in Le Marais.", img: "/cities/paris.jpg" },
-  { name: "New York", lat: 40.71, lng: -74.01, label: "The hotel fire", story: "My hotel caught on fire. I was inside. Made it out fine, the trip less so.", img: null },
+  { name: "New York", lat: 40.71, lng: -74.01, label: "The hotel fire", story: "My hotel caught on fire. I was inside. Made it out fine, the trip less so.", img: "/cities/paris.jpg" },
   { name: "Hong Kong", lat: 22.32, lng: 114.17, label: "The passport incident", story: "My passport went through the washing machine 4 days before this trip. Still made it.", img: null },
   { name: "Tokyo", lat: 35.68, lng: 139.69, label: "Japan", story: "Konbini onigiri at 2am might be the peak human experience. Also had my first Michelin meal here, omakase that made me rethink what attention to detail means.", img: null },
   { name: "Kyoto", lat: 35.01, lng: 135.77, label: "Temples and quiet", story: "Wrote my first API spec sitting in a garden in Arashiyama. Sometimes the best code comes from the quietest places.", img: null },
