@@ -54,7 +54,7 @@ export default function InteractiveMap() {
   
 
   return (
-    <div>
+    <div onClick={() => setActive(null)}>
 
       {mounted ? (
         <svg viewBox="0 0 900 600" className="w-full h-auto">
@@ -66,7 +66,7 @@ export default function InteractiveMap() {
             const isActive = active === i || hovered === i;
             return (
               <g key={city.name} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}
-                onClick={() => setActive(active === i ? null : i)} style={{ cursor: "pointer" }}>
+                onClick={(e) => { e.stopPropagation(); setActive(active === i ? null : i); }} style={{ cursor: "pointer" }}>
                 {isActive && (
                   <circle cx={x} cy={y} r={14} fill="none" stroke="#B8A88A" strokeWidth={0.8} opacity={0.4}>
                     <animate attributeName="r" from="6" to="20" dur="1.5s" repeatCount="indefinite" />
@@ -96,7 +96,7 @@ export default function InteractiveMap() {
         transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)", marginTop: current ? 20 : 0,
       }}>
         {current && currentIdx !== null && (
-          <div className="rounded-2xl px-[26px] py-[22px] flex gap-5 items-start"
+          <div className="rounded-2xl px-4 md:px-[26px] py-4 md:py-[22px] flex flex-col md:flex-row gap-4 md:gap-5 items-start"
             style={{ background: "#141311", border: "1px solid rgba(228,224,208,0.08)" }}>
             <div className="w-[130px] min-h-[95px] rounded-xl overflow-hidden flex-shrink-0"
               style={{ background: "#1A1917", border: "1px solid rgba(228,224,208,0.08)", display: current.img ? "block" : "none" }}
@@ -120,7 +120,8 @@ export default function InteractiveMap() {
 
       {!current && (
         <p className="text-center mt-4 font-body text-[12.5px] text-cream-dim italic">
-          Hover over a city to explore
+          <span className="hidden md:inline">Hover over a city to explore</span>
+          <span className="md:hidden">Tap a city to explore</span>
         </p>
       )}
     </div>
