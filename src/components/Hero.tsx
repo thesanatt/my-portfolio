@@ -2,16 +2,16 @@ import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-12 max-w-[1100px] mx-auto relative">
+    <section className="min-h-screen flex items-center px-6 md:px-12 max-w-[1100px] mx-auto relative">
       <div className="max-w-[600px]">
         <Reveal>
-          <p className="font-body text-[13px] text-cream-dim mb-7 tracking-[1.5px] uppercase">
+          <p className="font-body text-[12px] md:text-[13px] text-cream-dim mb-5 md:mb-7 tracking-[1.5px] uppercase">
             Computer Science &middot; University of Michigan
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h1 className="font-display text-[52px] font-medium leading-[1.15] text-cream mb-6">
+          <h1 className="font-display text-[34px] md:text-[52px] font-medium leading-[1.15] text-cream mb-5 md:mb-6">
             I like building things
             <br />
             that are <span className="text-accent">useful</span> and
@@ -21,21 +21,21 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="w-12 h-px bg-gold opacity-40 my-7" />
+          <div className="w-12 h-px bg-gold opacity-40 my-5 md:my-7" />
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="font-body text-base text-cream-soft leading-[1.8] max-w-[460px] mb-10">
+          <p className="font-body text-[15px] md:text-base text-cream-soft leading-[1.8] max-w-[460px] mb-8 md:mb-10">
             Full-stack applications, AI tools, developer platforms. Currently at
             the University of Michigan, always working on something new.
           </p>
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="flex gap-4 items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
             <a
               href="#work"
-              className="bg-accent text-bg px-8 py-3.5 rounded-[10px] text-sm font-body font-semibold no-underline hover:opacity-90 transition-opacity"
+              className="bg-accent text-bg px-8 py-3.5 rounded-[10px] text-sm font-body font-semibold no-underline hover:opacity-90 transition-opacity text-center"
             >
               See my work
             </a>
@@ -43,7 +43,7 @@ export default function Hero() {
               href="https://github.com/thesanatt"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cream-muted text-sm font-body no-underline px-5 py-3.5 hover:text-cream transition-colors"
+              className="text-cream-muted text-sm font-body no-underline px-5 py-3.5 hover:text-cream transition-colors text-center"
             >
               {"GitHub \u2192"}
             </a>
@@ -52,7 +52,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none hidden md:block"
         style={{
           right: "8%",
           top: "25%",

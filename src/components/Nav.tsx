@@ -6,6 +6,7 @@ const navLinks = ["Work", "World", "About", "Contact"];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -24,14 +25,16 @@ export default function Nav() {
         backgroundColor: scrolled ? "rgba(12,11,10,0.88)" : "transparent",
       }}
     >
-      <div className="max-w-[1100px] mx-auto px-12 flex justify-between items-center h-[72px]">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-12 flex justify-between items-center h-[64px] md:h-[72px]">
         <a
           href="#"
-          className="font-display font-semibold text-xl text-cream no-underline"
+          className="font-display font-semibold text-lg md:text-xl text-cream no-underline"
         >
           Sanat Gupta
         </a>
-        <div className="flex gap-8 items-center">
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex gap-8 items-center">
           {navLinks.map((label) => (
             <a
               key={label}
@@ -48,7 +51,48 @@ export default function Nav() {
             Resume
           </a>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden flex flex-col gap-[5px] p-2 cursor-pointer"
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-5 h-[1.5px] bg-cream transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
+          <span className={`block w-5 h-[1.5px] bg-cream transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-5 h-[1.5px] bg-cream transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          className="md:hidden px-6 pb-6 pt-2"
+          style={{
+            background: "rgba(12,11,10,0.95)",
+            backdropFilter: "blur(24px)",
+          }}
+        >
+          {navLinks.map((label) => (
+            <a
+              key={label}
+              href={`#${label.toLowerCase()}`}
+              onClick={() => setMenuOpen(false)}
+              className="block py-3 text-cream-soft no-underline text-base font-body hover:text-cream transition-colors"
+              style={{ borderBottom: "1px solid rgba(228,224,208,0.06)" }}
+            >
+              {label}
+            </a>
+          ))}
+          <a
+            href="/resume.pdf"
+            onClick={() => setMenuOpen(false)}
+            className="block py-3 text-accent no-underline text-base font-body font-medium"
+          >
+            Resume
+          </a>
+        </div>
+      )}
     </nav>
   );
 }

@@ -21,12 +21,12 @@ function ProjectCard({ title, subtitle, description, tags, index, featured }: Pr
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className={`rounded-[18px] transition-all duration-400 cursor-pointer ${
-          featured ? "col-span-2" : ""
+          featured ? "md:col-span-2" : ""
         }`}
         style={{
           background: hovered ? "#1A1917" : "#141311",
           border: `1px solid ${hovered ? "rgba(228,224,208,0.18)" : "rgba(228,224,208,0.08)"}`,
-          padding: featured ? "36px 32px" : "28px 26px",
+          padding: featured ? "28px 24px" : "24px 22px",
           transform: hovered ? "translateY(-2px)" : "none",
           transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
@@ -44,8 +44,9 @@ function ProjectCard({ title, subtitle, description, tags, index, featured }: Pr
         </div>
 
         <h3
-          className="font-display font-medium text-cream mb-2.5 leading-[1.2]"
-          style={{ fontSize: featured ? 27 : 22 }}
+          className={`font-display font-medium text-cream mb-2.5 leading-[1.2] ${
+            featured ? "text-[22px] md:text-[27px]" : "text-[20px] md:text-[22px]"
+          }`}
         >
           {title}
         </h3>
@@ -78,19 +79,19 @@ function ProjectCard({ title, subtitle, description, tags, index, featured }: Pr
 
 export default function Projects() {
   return (
-    <section id="work" className="py-[100px] px-12 max-w-[1100px] mx-auto">
+    <section id="work" className="py-16 md:py-[100px] px-6 md:px-12 max-w-[1100px] mx-auto">
       <Reveal>
         <p className="font-body text-xs text-cream-dim mb-3.5 font-medium tracking-[2px] uppercase">
           Selected Work
         </p>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="font-display text-[38px] font-medium text-cream leading-[1.15] mb-11">
+        <h2 className="font-display text-[30px] md:text-[38px] font-medium text-cream leading-[1.15] mb-8 md:mb-11">
           {"A few things I\u2019ve built."}
         </h2>
       </Reveal>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <ProjectCard
           index={0}
           featured

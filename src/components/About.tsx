@@ -10,8 +10,8 @@ const techStack = [
 
 export default function About() {
   return (
-    <section id="about" className="py-[100px] px-12 max-w-[1100px] mx-auto">
-      <div className="grid grid-cols-2 gap-14 items-start">
+    <section id="about" className="py-16 md:py-[100px] px-6 md:px-12 max-w-[1100px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
         <div>
           <Reveal>
             <p className="font-body text-xs text-cream-dim mb-3.5 font-medium tracking-[2px] uppercase">
@@ -19,7 +19,7 @@ export default function About() {
             </p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="font-display text-[38px] font-medium text-cream leading-[1.15] mb-11">
+            <h2 className="font-display text-[30px] md:text-[38px] font-medium text-cream leading-[1.15] mb-8 md:mb-11">
               A bit about me.
             </h2>
           </Reveal>
@@ -38,7 +38,7 @@ export default function About() {
 
         <Reveal delay={0.1}>
           <div
-            className="rounded-2xl p-7"
+            className="rounded-2xl p-6 md:p-7"
             style={{ background: "#141311", border: "1px solid rgba(228,224,208,0.08)" }}
           >
             <p className="font-body text-[11.5px] text-cream-dim mb-[18px] font-medium tracking-[2px] uppercase">
