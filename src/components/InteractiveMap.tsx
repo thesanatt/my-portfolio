@@ -13,9 +13,9 @@ const CITIES = [
   { name: "Tokyo", lat: 35.68, lng: 139.69, label: "Japan", story: "Konbini onigiri at 2am might be the peak human experience. Also had my first Michelin meal here, omakase that made me rethink what attention to detail means.", img: null },
   { name: "Kyoto", lat: 35.01, lng: 135.77, label: "Temples and quiet", story: "Wrote my first API spec sitting in a garden in Arashiyama. Sometimes the best code comes from the quietest places.", img: null },
   { name: "Milan", lat: 45.46, lng: 9.19, label: "Italy", story: "Came for the Duomo, stayed for the aperitivo. Design is everywhere in this city.", img: null },
-  { name: "Brugge", lat: 51.21, lng: 3.22, label: "Belgium", story: "Took a wrong turn into the backstreets and found the best waffle of my life. No regrets.", img: null },
-  { name: "Brussels", lat: 50.85, lng: 4.35, label: "Belgium", story: "Grand Place at night is one of those things that actually lives up to the photos.", img: null },
-  { name: "Luxembourg", lat: 49.61, lng: 6.13, label: "Smallest adventure", story: "An entire country in a day. The Bock Casemates felt like a video game level.", img: null },
+  { name: "Brugge", lat: 52.5, lng: 3.22, label: "Belgium", story: "Took a wrong turn into the backstreets and found the best waffle of my life. No regrets.", img: null },
+  { name: "Brussels", lat: 50.0, lng: 6.0, label: "Belgium", story: "Grand Place at night is one of those things that actually lives up to the photos.", img: null },
+  { name: "Luxembourg", lat: 49.61, lng: 8.5, label: "Smallest adventure", story: "An entire country in a day. The Bock Casemates felt like a video game level.", img: null },
   { name: "Zurich", lat: 47.37, lng: 8.54, label: "Switzerland", story: "Took the wrong train and ended up with a better view of the Alps than anything on my itinerary.", img: null },
   { name: "Loire Valley", lat: 47.35, lng: 0.68, label: "France", story: "Biked through vineyards and castles. France outside of Paris hits different.", img: null },
   { name: "Chicago", lat: 41.88, lng: -87.63, label: "Weekend trips", story: "Deep dish pizza and architecture boat tours. The Midwest’s other great city.", img: null },
@@ -67,7 +67,7 @@ export default function InteractiveMap() {
             return (
               <g key={city.name} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}
                 onClick={(e) => { e.stopPropagation(); setActive(active === i ? null : i); }} style={{ cursor: "pointer" }}>
-                  <circle cx={x} cy={y} r={12} fill="transparent" />
+                  <circle cx={x} cy={y} r={10} fill="transparent" />
                 {isActive && (
                   <circle cx={x} cy={y} r={14} fill="none" stroke="#B8A88A" strokeWidth={0.8} opacity={0.4}>
                     <animate attributeName="r" from="6" to="20" dur="1.5s" repeatCount="indefinite" />
