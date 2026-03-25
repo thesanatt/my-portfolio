@@ -26,7 +26,7 @@ export default function About() {
 
           <Reveal>
             <p className="font-body text-[15px] text-cream-muted leading-[1.85] mb-[18px]">
-              {"I study computer science at the University of Michigan. I\u2019ve had the chance to live and study in a few different places, and that shaped how I approach building things."}
+              {"CS Engineering and Math at the University of Michigan. I've worked on automation systems at Youphoria, production modeling with engineers at Eli Lilly, and a handful of personal projects in between."}
             </p>
           </Reveal>
           <Reveal delay={0.05}>
