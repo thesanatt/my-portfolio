@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+const navLinks = ["Work", "World", "About", "Contact"];
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,11 +17,14 @@ export default function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-xl bg-bg/88 border-b border-border"
+          ? "backdrop-blur-xl border-b border-border"
           : "border-b border-transparent"
       }`}
+      style={{
+        backgroundColor: scrolled ? "rgba(12,11,10,0.88)" : "transparent",
+      }}
     >
-      <div className="max-w-[1100px] mx-auto px-12 flex justify-between items-center h-18">
+      <div className="max-w-[1100px] mx-auto px-12 flex justify-between items-center h-[72px]">
         
           href="#"
           className="font-display font-semibold text-xl text-cream no-underline"
@@ -27,7 +32,7 @@ export default function Nav() {
           Sanat Gupta
         </a>
         <div className="flex gap-8 items-center">
-          {["Work", "World", "About", "Contact"].map((label) => (
+          {navLinks.map((label) => (
             
               key={label}
               href={`#${label.toLowerCase()}`}

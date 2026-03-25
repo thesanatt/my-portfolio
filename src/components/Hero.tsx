@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="max-w-[600px]">
         <Reveal>
           <p className="font-body text-[13px] text-cream-dim mb-7 tracking-[1.5px] uppercase">
-            Computer Science · University of Michigan
+            Computer Science &middot; University of Michigan
           </p>
         </Reveal>
 
@@ -42,15 +42,15 @@ export default function Hero() {
             
               href="https://github.com/thesanatt"
               target="_blank"
+              rel="noopener noreferrer"
               className="text-cream-muted text-sm font-body no-underline px-5 py-3.5 hover:text-cream transition-colors"
             >
-              GitHub →
+              {"GitHub \u2192"}
             </a>
           </div>
         </Reveal>
       </div>
 
-      {/* Subtle warm ambient glow */}
       <div
         className="absolute pointer-events-none"
         style={{
