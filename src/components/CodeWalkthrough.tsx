@@ -6,19 +6,23 @@ import Reveal from "./Reveal";
 const steps = [
   {
     line: "vscode.workspace.onDidChangeTextDocument(event => {",
-    note: "Listen for every keystroke and edit across all open files in VS Code",
+    note: "Listen for every file edit across all open files in VS Code, filtering out non-file schemes like git and output channels.",
   },
   {
-    line: "const timeout = setTimeout(() => {",
-    note: "Debounce for 5 seconds — only log after the student pauses typing, not on every character",
+    line: "const timeout = setTimeout(() => { ... }, 5000);",
+    note: "Debounce per file. Only snapshot after 5 seconds of inactivity so we capture meaningful edits, not every keystroke.",
   },
   {
     line: "logEntries.push({ timestamp, filename, content });",
-    note: "Store the full file snapshot with a timestamp. This builds the tamper-proof edit timeline.",
+    note: "Store the full file snapshot with a timestamp. These build up into a tamper-proof timeline of how the code was actually written.",
   },
   {
-    line: "await fetch('http://localhost:5000/api/uploadLogs', {",
-    note: "Push all logged snapshots to the Express backend, linked to the student's email for professor review.",
+    line: "const res = await fetch(`${API}/api/classes/verify/${code}`);",
+    note: "Before saving a class code, validate it against the backend. If the class does not exist, the student gets an error immediately.",
+  },
+  {
+    line: "await fetch(`${API}/api/logs/upload`, { method: 'POST', ... })",
+    note: "Push all snapshots to Railway with the student email and class code. The professor sees them appear in the dashboard instantly.",
   },
 ];
 
@@ -43,7 +47,7 @@ export default function CodeWalkthrough() {
             className="font-body text-xs ml-2.5"
             style={{ color: "rgba(255,255,255,0.3)" }}
           >
-            ScholarTrace
+            ScholarTrace — extension.ts
           </span>
         </div>
 
