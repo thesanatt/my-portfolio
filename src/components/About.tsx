@@ -1,11 +1,11 @@
 import Reveal from "./Reveal";
 
 const techStack = [
-  { label: "Languages", items: "TypeScript \u00B7 Python \u00B7 Java \u00B7 C++" },
-  { label: "Frontend", items: "React \u00B7 Next.js \u00B7 Tailwind" },
-  { label: "Backend", items: "Node.js \u00B7 PostgreSQL \u00B7 Prisma" },
-  { label: "ML", items: "PyTorch \u00B7 TensorFlow \u00B7 LLM APIs" },
-  { label: "Infra", items: "Git \u00B7 Docker \u00B7 Vercel" },
+  { label: "Languages", items: "TypeScript \u00B7 Python \u00B7 Java \u00B7 C++ \u00B7 SQL" },
+  { label: "Frontend", items: "React \u00B7 Next.js \u00B7 Tailwind \u00B7 Vite" },
+  { label: "Backend", items: "Node.js \u00B7 Express \u00B7 FastAPI \u00B7 MongoDB" },
+  { label: "ML", items: "Bayesian Methods \u00B7 scikit-learn \u00B7 PyTorch" },
+  { label: "Infra", items: "Git \u00B7 Vercel \u00B7 Railway \u00B7 GitHub Actions" },
 ];
 
 export default function About() {
