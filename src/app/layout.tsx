@@ -35,6 +35,13 @@ export const metadata: Metadata = {
       "CS Engineering at the University of Michigan, Ann Arbor.",
     url: "https://thesanatgupta.com",
     siteName: "Sanat Gupta",
+    images: [
+      {
+        url: "https://thesanatgupta.com/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
     type: "website",
   },
 };
